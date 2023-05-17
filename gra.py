@@ -1,5 +1,5 @@
 import os
-
+import keyboard
 WIDTH = 80
 HEIGHT = 20
 
