@@ -24,3 +24,15 @@ def draw_board():
         print("\033[1m" + "|" + "\033[0m")
 
     print("\033[1m" + "+" + "-" * WIDTH + "+" + "\033[0m")
+
+def move_paddles():
+    global paddle1_y, paddle2_y
+    if keyboard.is_pressed('w') and paddle1_y > 0:
+        paddle1_y -= 1
+    if keyboard.is_pressed('s') and paddle1_y + 2 < HEIGHT:
+        paddle1_y += 1
+    if keyboard.is_pressed('i') and paddle2_y > 0:
+        paddle2_y -= 1
+    if keyboard.is_pressed('k') and paddle2_y + 2 < HEIGHT:
+        paddle2_y += 1
+
