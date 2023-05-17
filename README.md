@@ -1,3 +1,3 @@
 # ping-pong-python
 WAŻNE!
-Do poprawnego działania gry wymagane jest zaimportowanie modułu KEYBOARD!
+Do poprawnego działania gry wymagane jest pobranie modułu KEYBOARD!
