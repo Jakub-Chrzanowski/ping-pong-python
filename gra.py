@@ -1,11 +1,10 @@
-import os
 import time
 import random
 import keyboard
 import sys
 
 
-WIDTH = 150
+WIDTH = 154
 HEIGHT = 10
 
 
@@ -86,7 +85,7 @@ def play_pong():
         if ball_x <= 2 and paddle1_y <= ball_y < paddle1_y + 2: #Odbijanie lewej paletki
                 ball_speed_x = 1
                 
-        elif ball_x >= WIDTH//2-5 and paddle2_y <= ball_y < paddle2_y + 2: #Odbijanie prawej paletki
+        elif ball_x >= WIDTH//2-3 and paddle2_y <= ball_y < paddle2_y + 2: #Odbijanie prawej paletki
                 ball_speed_x = -1
                 
 
@@ -121,5 +120,36 @@ def play_pong():
         
         time.sleep(0.03)
 
- 
-play_pong()
+#Początek gry
+def gamestart():
+    cursor(1,0)
+    print("===============")
+    cursor(2,0)
+    print("  PING PONG")
+    cursor(3,0)
+    print("===============")
+    cursor(4,0)
+    print("Instructions:")
+    cursor(5,0)
+    print("Use the 'W' and 'S' keys to control the left paddle.")
+    cursor(6,0)
+    print("Use the 'I' and 'K' keys to control the right paddle.")
+    cursor(7,0)
+    print("Try to hit the ball and score points!")
+    cursor(8,0)
+    print("Press 'Q' to quit the game.")
+    cursor(9,0)
+    print("===============")
+    cursor(10,0)
+    cursor(11,0)
+    print("Information about game:")
+    print("Game made by Jakub Chrzanowski 1TP")
+    print("Version:26.05")
+    print("Programming language: Python")
+    print("Game made in: MS Visual Studio")
+    print("Wait 5s to start game")
+    time.sleep(5)
+    play_pong()
+    
+gamestart()
+
