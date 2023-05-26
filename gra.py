@@ -32,13 +32,13 @@ def cursor(x,y):
 #Rysowanie planszy oraz piłki
 def draw_board():
     cursor(1,0)
-    print(" " * (WIDTH - 5) + "PING PONG" )
+    print(" " * (WIDTH // 2) + "PING PONG" )
     cursor(2, 0)
-    print( " " * (WIDTH - 5) + "Score" )
+    print( " " * (WIDTH // 2) + "Score" )
     cursor(3, 0)
-    print( " " * (WIDTH - 5) + f"Player 1: {score1}" )
+    print( " " * (WIDTH // 2) + f"Player 1: {score1}" )
     cursor(4, 0)
-    print( " " * (WIDTH - 5) + f"Player 2: {score2}")
+    print( " " * (WIDTH // 2) + f"Player 2: {score2}")
     cursor(5, 0)
     print( "+" + "-" * WIDTH + "+" )
 
@@ -96,14 +96,14 @@ def play_pong():
         
         elif ball_x < 0: #Przejście piłki z lewej strony
             score2 += 1
-            ball_x = WIDTH // 2
-            ball_y = HEIGHT // 2
+            ball_x = WIDTH // 4
+            ball_y = HEIGHT // 4
             ball_speed_x = -1
             ball_speed_y = random.choice([-1, 1])
         elif ball_x >= WIDTH: #Przejście piłki z prawej strony
             score1 += 1
-            ball_x = WIDTH // 2
-            ball_y = HEIGHT // 2
+            ball_x = WIDTH // 4
+            ball_y = HEIGHT // 4
             ball_speed_x = -1
             ball_speed_y = random.choice([-1, 1])
 
